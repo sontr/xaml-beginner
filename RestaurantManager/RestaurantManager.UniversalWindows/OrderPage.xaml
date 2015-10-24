@@ -30,24 +30,22 @@
                    Text="Order Items:"
                    HorizontalAlignment="Center" />
 
-        <ListView Grid.Row="2"
-                  Grid.Column="0">
-            <ListViewItem>Test Item 1</ListViewItem>
-            <ListViewItem>Test Item 1</ListViewItem>
-            <ListViewItem>Test Item 1</ListViewItem>
-        </ListView>
+        <ListView Name="MenuItems"
+                  Grid.Row="1"
+                  Grid.RowSpan="3"
+                  Grid.Column="0"
+                  ItemsSource="{Binding Source={StaticResource DataManager}, Path=MenuItems}" />
 
-        <ListView Grid.Row="2"
-                  Grid.Column="2">
-            <ListViewItem>Test Item 1</ListViewItem>
-            <ListViewItem>Test Item 1</ListViewItem>
-            <ListViewItem>Test Item 1</ListViewItem>
-        </ListView>
+        <ListView Name="SelectedMenuItems"
+                  Grid.Row="2"
+                  Grid.Column="2"
+                  ItemsSource="{Binding Source={StaticResource DataManager}, Path=CurrentlySelectedMenuItems}" />
 
         <Button Grid.Row="4"
                 Content="Add to Order"
                 HorizontalAlignment="Center"
-                VerticalAlignment="Center" />
+                VerticalAlignment="Center"
+                Click="AddToOrder_Click" />
 
         <Button Grid.Row="4"
                 Grid.Column="1"

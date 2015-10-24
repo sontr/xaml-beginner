@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantManager.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -30,6 +31,19 @@ namespace RestaurantManager.UniversalWindows
         private void HomeButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void AddToOrder_Click(object sender, RoutedEventArgs e)
+        {
+            //var itemsSource = MenuItems.ItemsSource as List<string>;
+            //if (itemsSource != null)
+            //{
+            //    string selectedMenuItem = MenuItems.SelectedValue?.ToString() ?? string.Empty;
+            //    if (!string.IsNullOrWhiteSpace(selectedMenuItem))
+            //    {
+            //        itemsSource.Add(selectedMenuItem);
+            //    }
+            //}
         }
     }
 }
